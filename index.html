@@ -18,61 +18,48 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="logo">
-                <a href="index.html">
+        <header class="navbar navbar-expand-md">
+            <div class="navbar-brand">
                     <img src="images/logo-roar-bikes.svg" alt="Logo for Bike Repair shop Roar Bikes">
                 </a>
             </div>
-
-            <nav>
-
-
-                <div class="navbutton">
-                    <a href="#">Book Online</a>
-
-
-
-                    <div class="newbox">
-                        <div class="dropdown">
+			<button class="navbar-toggler" type="button" onclick="toggle()">
+				<img src="images/icon-burger-menu.png" alt="Mobile Menu Icon" style="width: 40px;" class="burgermenu">
+			</button>
+            <nav class="collapse navbar-collapse">
+				<ul class="navbar-nav" id="navbar-nav">
+                   <li class="navbutton">
+                      <a href="#">Book Online</a>
+                      <div class="newbox">
+                         <div class="dropdown">
                             <div class="navbutton"><a href="#">Onsite Service</a></div>
                             <div class="navbutton"><a href="#">Parts Delivery</a></div>
                             <div class="navbutton"><a href="#">Request Callback</a></div>
-                        </div>
-                    </div>
+                         </div>
+				      </div>
+                   </li>
 
-
-                    
-                </div>
-
-                <div class="navbutton">
-                    <a href="#">About</a>
-                </div>
+                   <li class="navbutton">
+                      <a href="#">About</a>
+                   </li>
                 
-                <div class="navbutton">
-                    <a href="contact-us.html">Conact</a>
-                </div>
-
-
+                   <li class="navbutton">
+                      <a href="contact-us.html">Contact</a>
+                   </li>
+				</ul>
             </nav>
         </header>
-        
-
-
         <main>
             <div class="herobox1">
-    
               <h1>Mobile bike repairs.</h1>
                 <p>Many people have difficulty getting their bikes to a bike shop. We call to your office or home anywhere in greater Dublin.</p>
-                <p> Fast, convenient bike servicing with up-front pricing. All without the hassle of taking your bike into a shop.</p>
+                <p>Fast, convenient bike servicing with up-front pricing. All without the hassle of taking your bike into a shop.</p>
                 <a href="test-page.html" class="mybutton">Book Online</a>
             </div>
             <div class="herobox2">
                 <img src="images/image-bike-repair-service.jpg" alt="person servicing a bike in dublin">
             </div>
         </main>
-
-
 
         <div class="cards">
             <div class="card1">
@@ -111,21 +98,27 @@
                 <p>- Floris V.</p>
             </div>
         
-        
             <div class="tbox">
                 <p>"I'm good to go. Roar Cycles is both attractive and highly adaptable. I will refer everyone I know."</p>
                 <p>- Carlin B.</p>
             </div>
-
-
+			
             <div class="tbox">
                 <p>"Roar Cycles impressed me on multiple levels. I would gladly pay over 600 dollars for Roar Cycles. We can't understand how we've been living without Roar Cycles."</p>
                 <p>- Eve V.</p>
             </div>
-
         </div>
-
-
     </div>
-</body>
+	<script>
+	    function toggle(){
+			alert("Test");
+			var x = document.getElementById("navbar-nav");
+			if (x.style.display === "flex") {
+				x.style.display = "none";
+			} else {
+				x.style.display = "flex";
+			}
+		}
+	</script>
+	</body>
 </html>

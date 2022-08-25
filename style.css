@@ -6,39 +6,74 @@ body {
     background-image: url(images/image-lion-background.png);
     background-position: top center; 
     background-repeat: no-repeat;
-     font-family: 'Roboto', sans-serif;
-    color: white;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.125rem;
 }
 
+
+header, 
+main, 
+.cards, 
+.testimonials{
+   display: flex;
+}
+
+body, a{
+	color: white;
+}
+
 a {
-    color: white;
     text-decoration: none;
 }
 
+.container,
+.card1, 
+.card2, 
+.card3,
+.herobox2,
+.herobox2, .herobox2 > img,
+.tbox,
+input[type=text], 
+input[type=email], 
+textarea{
+    width: 100%;	
+}
 
 .container {
-    width: 1024px;
-    min-height: 300px;
     margin-left: auto;
     margin-right: auto;
 }
 
+header,
+.testimonials {
+	justify-content: space-between;
+}
+
+header,
+.dropdown{
+	padding-top: 20px;
+}
+
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
+    
     padding-bottom: 20px;
     border-bottom: 1px solid lightgrey;
 }
 
+.navbar-toggler{
+	background-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: 1px solid #fff;
+}
 
+
+header,
+main{
+	align-items: center;
+}
 
 main {
-    min-height: 300px;
-    display: flex;
-    align-items: center;
+	flex-direction: column-reverse;
 }
 
 .main2 {
@@ -46,64 +81,54 @@ main {
     padding-top: 50px;
 }
 
-.cards {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
+.cards,
+.navbar-nav {
+	flex-direction: column;
+}
+
+.card1, .card2, .card3{
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.228);
+    padding: 30px 30px 20px 30px; 
+    box-sizing: border-box;
+	margin-top: 55px;
 }
 
 .card1 {
     background-image: url(images/image-background-card1.jpg);
-    background-size: cover;
-    background-position: bottom;
-    min-height: 250px;
-    width: 30%;   
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.228);
 }
 
 .card2 {
     background-image: url(images/image-background-card2.jpg);
-    background-size: cover;
-    background-position: bottom;
-    width: 30%;
-    min-height: 250px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.228);
 }
 
 .card3 {
     background-image: url(images/image-background-card3.jpg);
-    background-size: cover;
-    background-position: bottom;
-    width: 30%;
-    min-height: 250px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.228);
 }
 
-.card1, .card2, .card3 {
-    padding: 30px 30px 20px 30px; 
-    box-sizing: border-box;
-}
 
-.herobox1 {
-    flex: 2;
-    padding-right: 100px;
+.herobox1, .herobox2{
+	flex: 1
 }
 
 .herobox2 {
-    flex: 1;
-    
+	margin-bottom: 55px;
 }
 
-h1 {
+h1, h2, .mybutton, .navbutton {
+	font-family: 'Playfair Display', serif;
+}
+
+h1{
     font-size: 3.25rem;
-    font-family: 'Playfair Display', serif;
     margin-bottom: 1rem;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.228);
 }
 
 h2 {
     font-size: 2rem;
-    font-family: 'Playfair Display', serif;
     margin-top: 20px;
 }
 
@@ -127,7 +152,6 @@ p {
 .mybutton {
     background-color: white;
     color: #FA4083;
-    font-family: 'Playfair Display', serif;
     padding: 11px 25px;
     border-radius: 2px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.228);
@@ -151,30 +175,21 @@ nav a.mybutton {
 .navbutton {
     border: 1px solid white;
     padding: 11px 25px;
-    font-family: 'Playfair Display', serif;
     display: inline-block;
     position: relative;
 }
 
 .testimonials {
-    display: flex; 
     flex-wrap: wrap;
-    justify-content: space-between;
     margin-bottom: 100px;
 }
 
 .tbox {
-    width: 47%;
     padding: 50px;
     border: 1px solid white;
     box-sizing: border-box;
     margin-top: 50px;
 }
-
-/* .tbox :last-child {
-    font-size: .8rem;
-} */
-
 
 .tbox p:last-of-type {
     font-size: 0.8rem;
@@ -185,7 +200,6 @@ nav a.mybutton {
     display: none;
     position: absolute;
     z-index: 1;
-    padding-top: 20px;
     text-align: center;
 }
 
@@ -207,9 +221,17 @@ nav a.mybutton {
     margin-bottom: 30px;
 }
 
+.navbar-nav{
+	display: none;
+}
+
+.navbar-nav{
+	position: relative;
+	margin-right: auto;
+}
+
 input[type=text], input[type=email], textarea {
     padding: 12px 20px; 
-    width: 100%;
     font-family: 'Roboto', sans-serif;
     font-size: 0.85rem;
     box-sizing: border-box;
@@ -230,4 +252,95 @@ input[type=radio] {
 
 form {
     margin: 40px 0px;
+}
+
+@media (min-width: 576px) { 
+	.container{
+		width: 540px;
+	}
+}
+
+
+@media (min-width: 768px) {
+	.container{
+		width: 720px;
+	}
+	
+	.cards {
+		margin-top: 55px;
+		justify-content: space-between;
+		text-align: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	
+	.card1, .card2, .card3{
+		width: 47%;
+		margin-top: 0px;
+		flex-wrap: wrap;
+	}
+	
+	.card3{
+		margin-top: 55px;
+	}
+	
+	.navbar-expand-md .collapse{
+		display: flex;
+    }
+	
+	.navbar-toggler{
+		display: none;
+	}
+	
+	.navbar-nav{
+		display: block;
+	}
+}
+
+
+@media (min-width: 992px) { 
+	.container{
+		width: 960px;
+	}
+	
+	main{
+		flex-direction: row;
+	}
+	
+	.cards {
+		justify-content: space-between;
+		text-align: center;
+		flex-direction: row;
+	}
+	
+	.card1, .card2, .card3{
+		width: 30%;
+		margin-top: 0px;
+	}
+	
+	.herobox1 {
+		flex: 2;
+		padding-right: 100px;
+	}
+
+	.herobox2 {
+		flex: 1;
+	}
+	
+	.tbox {
+		width: 47%;
+	}
+}
+
+@media (min-width: 1200px) { 
+	.container{
+		width: 1140px;
+	}
+}
+
+
+@media (min-width: 1400px) { 
+	.container{
+		width: 1320px;
+	}
 }
